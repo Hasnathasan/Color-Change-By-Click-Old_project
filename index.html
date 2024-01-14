@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event JS</title>
+</head>
+<body>
+    <h1 onclick="console.log(52)">Hello Guys</h1>
+    <button  onclick="console.log('Hi there')">Click Me</button>
+    <button onclick="document.body.style.backgroundColor = 'red'">Color change</button>
+    <button id="colorizer">Color change</button>
+    <button id="color-hand">Color change</button>
+    <button id="color-change">Color change</button>
+
+    <script>
+        const color = document.getElementById('colorizer');
+        color.onclick = colorizer;
+        function colorizer(){
+        document.body.style.backgroundColor = 'blue';
+    }
+    const pink = document.getElementById('color-hand');
+    pink.addEventListener('click', colorPink);
+    function colorPink(){
+        document.body.style.backgroundColor = 'pink';
+    }
+    document.getElementById('color-change').addEventListener('click', function colorChange(){
+        document.body.style.backgroundColor = 'green';
+    })
+    </script>
+    <script src="js/event.js"></script>
+</body>
+</html>

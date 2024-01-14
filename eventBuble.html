@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section id="section">
+        <h1>Hello Hi Bye</h1>
+        <ul id="ul-group">
+            <li class="li-1">li-1</li>
+            <li class="li-2">li-2</li>
+            <li id="li-3">li-3</li>
+            <li class="li-4">li-4</li>
+            <li class="li-5">li-5</li>
+        </ul>
+    </section>
+
+
+    <script>
+        document.getElementById('section').addEventListener('click', function(){
+            console.log('section clicked')
+        })
+        document.getElementById('ul-group').addEventListener('click', function(){
+            console.log('Ul Clicked')
+        });
+        document.getElementById('li-3').addEventListener('click', function(event){
+            console.log('Li-3 Clicked');
+            event.stopPropagation();
+        })
+    </script>
+</body>
+</html>
